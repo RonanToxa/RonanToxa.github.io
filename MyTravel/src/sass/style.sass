@@ -1,0 +1,499 @@
+$color-bg: #47392c
+$text-color: #d4c7c7
+hr
+    margin: 0
+    padding: 0
+h1,h2,h3
+    margin: 0
+    font-size: 16px
+    font-weight: normal
+*
+    margin: 0
+    padding: 0
+html,
+body
+    height: 100%
+
+    // CARD-BOOTSRAP
+
+.card
+    img
+        width: 15%
+
+.card_bold
+    font-weight: 700
+    font-size: 36px
+
+
+.card-text
+    span
+        font-weight: bold
+        color: $color-bg
+    &_bold
+
+        width: 320px
+        font-size: 17px
+        font-weight: 600
+
+.card-title
+    font-weight: bold
+    padding: 5px 0
+    font-size: 18px
+
+.card-procent
+    font-weight: 700
+    font-size: 18px
+    font-family: italic
+    padding: 0 0 5px
+
+    // PAGE
+.page
+    min-height: 100%
+    display: flex
+    flex-direction: column
+
+        // LOGO
+
+.logo
+    margin-left: 20px
+    font-size: 27px
+    font-weight: 600
+    text-decoration: none
+    color: #d27007
+    transition: 0.4s
+    span
+        color: #ffffff
+    &:hover
+        transition: 0.3s
+        color: #fff
+
+    // CONTAINER
+
+.container
+    max-width: 970px
+    margin: 0 auto
+    position: relative
+
+
+    //title
+
+
+.title__text
+    text-align: center
+    display: inline
+    font-weight: 500
+    color: #fff
+    font-size: 24px
+    background: $color-bg
+
+.title__cursiv
+    width: 100%   
+    background-color: $color-bg
+    height: 4px
+
+.content__title
+    width: 42%
+    position: absolute
+    right: 0
+    text-align: left
+
+        // HEADER
+.header
+    opacity: .9
+    padding-top: 10px
+    text-decoration: none
+    background-color: $color-bg
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__nav
+        font-size: 16px
+        padding: 10px 0 15px 0
+        margin: 0 auto
+        &_none
+            display: none
+    &__logo
+        padding: 2px 0 13px 0
+
+    &__menu
+        position: relative
+        color: #fff
+        margin-right: 50px
+        text-decoration: none
+        &:last-child
+            margin-right: 20px
+
+        &:hover
+            color: $text-color
+            transition: .3s
+        &:before
+            content: ''
+            width: 100%
+            height: 1px
+            background-color: $text-color
+            position: absolute
+            left: 0
+            bottom: -5px
+            transform: scaleX(0)
+            transform-origin: right
+            transition: transform 0.2s
+        &:hover:before
+            transform: scaleX(1)
+            transition: transform 0.2s
+            transform-origin: left
+
+    &__menu.active
+        color: #d4c7c7
+        &::before
+            content: ''
+            background-color: $text-color
+            position: absolute
+            left: 0
+            bottom: -5px
+            transform: scaleX(1)
+
+                // MENU
+.menu
+    &__link
+        font-size: 27px
+        color: #fff
+        transition: 0.3s
+        &:hover
+            transition: .3s
+            color: #d27007
+    &__list
+        width: 100px
+        &:hover .sub-menu__list
+            opacity: 1
+            transition: 0.4s
+            pointer-events: all
+    a
+        text-decoration: none
+    li
+        position: relative
+        list-style: none
+.sub-menu__list
+    opacity: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    position: absolute
+    left: -20px
+    padding: 10px 10px 0
+    text-align: left
+    width: 180px
+    height: 300px
+    transition: .4s all
+    pointer-events: none
+    box-shadow: 1px 7px 10px 4px black
+    background-color: #000000d9
+    li
+        margin-top: 30px
+        &:nth-child(1)
+            margin: 0
+.sub-menu__list li
+    padding: 18px 0 0 0 0
+
+.sub-menu__link
+    font-size: 20px
+    font-weight: 500
+    color: #fff
+    transition: 0.5s
+    &:hover
+        color: #000
+        border-radius: 6px
+        background-color: #eae8e8e1
+
+
+            //LIFE
+
+
+.life
+    background-color: #e3e3e35c
+    padding: 80px 0 40px 0
+    &__wrapper
+        display: flex
+        justify-content: space-between
+    &__item
+        margin-top: 15px
+        text-align: justify
+        .item__img
+            margin: 30px 9px 0 0
+            height: 475px
+            img
+                width: 552px
+                height: 500px
+        .item__text
+            margin-top: 30px
+            font-size: 18px
+
+    &__img
+        margin-top: 30px
+        width: 100%
+        height: 400px
+        img
+            display: block
+            margin: auto
+            width: 100%
+            height: 300px
+    &__text
+        margin-top: 30px
+        text-align: justify
+        font-size: 18px
+        color: #000
+
+           // MAIN
+.main
+    display: flex
+    flex-direction: column
+    flex: 1 1 auto
+    min-height: 350px
+    background: url('../img/bg/bg1.jpg') right center no-repeat  
+    background-size: 120%
+    box-shadow: -8px -8px 57px 4px $color-bg
+    &_margin
+        margin-top: 80px
+    &__arrow
+        display: block
+        margin: 0 auto
+        width: 20px
+        height: 20px
+        
+        img
+            width: 50px 
+            height: 50px 
+        &:hover
+            color: #fff
+    &__block
+        margin-top: 60px
+    &__block.main_mgt
+        margin-top: 80px
+
+    &__header
+        color: #fff
+        text-align: center
+        font-size: 32px
+        font-weight: bold
+    &__subheader
+        font-weight: 600
+        color: #fff
+        text-align: center
+        margin-top: 14px
+        font-size: 18px
+    &__text
+        margin-top: 15px
+        text-align: center
+        font-weight: 500
+        font-size: 18px
+        color: #fff
+    &__btn
+        margin-top: 50px
+        .btn
+            display: block
+            margin: 0 auto
+            width: 261px
+            height: 62px
+            background-color: #fff
+            border-radius: 10px
+            border: none
+            background-color: $color-bg
+            color: #cdcbcb
+            font-weight: 600
+            text-transform: uppercase
+            transition: 0.5s
+            &:hover
+                color: #fff
+                background-color: #f3830b
+
+.main.poland
+    background: url('../img/bg/bg-poland.jpg') 55% 45% no-repeat
+.main.egypt
+    background: url('../img/bg/bg-egypt.jpg') 50% 70% no-repeat
+.main.hungary
+    background: url('../img/bg/bg-hungary.jpg') 49% 38% no-repeat
+.main.turkey
+    background: url('../img/bg/bg-turkey1.jpg') 50% 65% no-repeat
+
+        //SECTION
+
+.section
+    padding: 80px 0 90px 0
+    &__content
+        box-shadow: 6px 5px 10px 1px black
+        border-radius: 5px
+        text-align: center
+        padding: 20px 0
+    &__text
+        margin-top: 15px
+        font-weight: 500
+        font-size: 18px
+        line-height: 26px
+        padding: 0 10px
+    &__title
+        font-weight: 500
+        font-size: 30px
+
+            // CARDS
+
+.cards
+    padding: 114px 0 50px
+    &__title
+        font-size: 24px
+        color: #fff
+        text-align: center
+        font-weight: 600
+        width: 630px
+        background-color: $color-bg
+    &__cursiv
+        background-color: $color-bg
+        height: 4px
+        width: 100%
+    &__arrow
+        display: block
+        margin: 0 auto
+        margin-top: 10px
+        padding: 20px 0 10px 0
+     
+    &__subtitle
+        margin-top: 15px
+        text-align: center
+        font-size: 18px
+        font-weight: 400
+    &__wrappaer
+        margin-top: 20px
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__text
+        display: block
+        z-index: 2
+        color: #d8d8d8
+        font-weight: 800
+        font-size: 23px
+        text-align: center
+    &__span
+        text-align: right
+        span
+            font-weight: 700 
+            font-size: 20px
+            opacity: .76
+            font-style: italic
+            color: black
+    &__content
+        display: flex
+        justify-content: center
+        flex-direction: column
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0,0.63 )
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 3
+        opacity: 0
+        transition: 0.4s
+        &:hover
+            transition: 0.4s
+            opacity: 1
+        
+    &__item
+        position: relative
+        width: 25%
+        margin-right: 20px
+        z-index: 3
+    &__img
+        
+        img
+            width: 230px
+            height: 210px
+            border: 4px solid #D7D7D7
+            
+
+        // NONAME
+
+.noname
+    position: relative
+    padding: 20px 0
+    &.time
+        min-height: 180px
+    &_margin
+        display: inline-block
+        margin-top: 28px
+    &__title
+        font-weight: bold
+        font-size: 26px
+        margin: 0 auto
+    &__subtitle
+        margin-top: 10px
+        line-height: 25px
+        font-weight: 400
+        font-size: 16px
+        text-align: center
+    &__wrapper
+        margin-top: 80px
+        display: flex
+        justify-content: space-around
+        align-items: center
+        text-align: center
+    &__item
+        padding-right: 50px
+        &:last-child
+            padding-right: 0
+
+        // FOOTER
+
+.footer
+    height: 40px
+    background-color: $color-bg
+    opacity: .9
+    &__descr
+        margin-top: 15px
+        font-size: 12px
+        text-align: left
+        color: #bfbbbb
+
+
+        // WORK-SALARY
+
+
+.work-salary
+    padding: 40px 0 10px 0
+    text-align: center
+    &.margint
+        margin-top: 80px
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+
+    &__text
+        position: absolute
+        width: 160px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        font-size: 18px
+        span
+            font-size: 26px
+            font-weight: bold
+            color: #fff
+    &__title
+        position: absolute
+        top: -55px
+        left: 28%
+        font-size: 28px
+        text-transform: uppercase
+        color: #000
+        font-weight: 700
+
+    &__info
+        position: relative
+        width: 220px
+        height: 220px
+        background-color: $color-bg
+        border: 2px solid black
+        border-radius: 50%
+        color: $text-color
